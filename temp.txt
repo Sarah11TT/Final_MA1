@@ -1,0 +1,4000 @@
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Execution
+Technique = Command and
+Scripting Interpreter:
+Unix Shell
+Technique ID = T1059.004
+Procedure = Cyclops Blink executes downloaded files
+using the Linux API function execlp.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Persistence
+Technique = Boot or Logon
+Initialization Scripts:
+RC Scripts
+Technique ID = T1037.004
+Procedure = Cyclops Blink is executed on device
+startup, using a modified S51armled RC
+script.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Persistence
+Technique = Pre-OS Boot:
+System Firmware
+Technique ID = T1542.001
+Procedure = Cyclops Blink maintains persistence
+throughout the legitimate device firmware
+update process. This is achieved by
+patching the firmware when it is
+downloaded to the device.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Defence Evasion
+Technique = Impair Defenses:
+Disable or Modify
+System Firewall
+Technique ID = T1562.004
+Procedure = Cyclops Blink modifies the Linux
+iptables firewall to enable C2
+communication via a stored list of port
+numbers.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Defence Evasion
+Technique = Masquerading:
+Match Legitimate
+Name or Location
+Technique ID = T1036.005
+Procedure = Cyclops Blink renames its running
+process to masquerade as a Linux kernel
+thread.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Discovery
+Technique = System Information
+Discovery
+Technique ID = T1082
+Procedure = Cyclops Blink regularly queries device
+information.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Command And Control
+Technique = Data Encoding: Non-
+Standard Encoding
+Technique ID = T1132.002
+Procedure = Cyclops Blink command messages use a
+custom binary scheme to encode the
+specific command to be executed, as well
+as any command parameters required.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Command And Control
+Technique = Fallback Channels
+Technique ID = T1008
+Procedure = Cyclops Blink randomly selects a C2
+server from contained lists of IPv4
+addresses and port numbers.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Command And Control
+Technique = Application Layer
+Protocol: Web
+Protocols
+Technique ID = T1071.001
+Procedure = Cyclops Blink can download files via
+HTTP or HTTPS.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Command And Control
+Technique = Encrypted Channel:
+Asymmetric
+Cryptography
+Technique ID = T1573.002
+Procedure = Cyclops Blink C2 messages are
+individually encrypted using AES-256-
+CBC and sent underneath TLS.
+OpenSSL library functions are used to
+encrypt each message using a randomly
+generated key and IV, which are then
+encrypted using a hard-coded RSA
+public key.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Command And Control
+Technique = Non-Standard Port 
+Technique ID = T1571
+Procedure = Cyclops Blink contains a list of port
+numbers used for C2 communication.
+This list includes non-standard ports not
+typically associated with HTTP or HTTPS
+traffic.
+
+Title = Cyclops Blink
+Date = 23 February 2022
+Attack Type = Malware
+Industry = Small Office/Home Office (SOHO) network devices
+Actor = Sandstorm
+Motivation = Surveillance, Access, Infrastructure
+Tactic = Exfiltration
+Technique = Exfiltration Over C2
+Channel
+Technique ID = T1041
+Procedure = Cyclops Blink is capable of uploading
+files to a C2 server.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Execution
+Technique = System Services
+Technique ID = T1569
+Procedure = Infamous Chisel - netd replaces the legitimate netd.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Persistence (Mobile)
+Technique = Boot or Logon Initialization Scripts
+Technique ID = T1398
+Procedure = Infamous Chisel - netd replaces the legitimate netd.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Persistence (Mobile)
+Technique = Hijack Execution Flow
+Technique ID = T1625
+Procedure = Infamous Chisel - netd replaces the legitimate netd and is executed by init inheriting root privileges.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Privilege Escalation
+Technique = Abuse Elevation Control Mechanism
+Technique ID = T1626 (Mobile)
+Procedure = Infamous Chisel - netd executes shell scripts as the root user of the device.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Defense Evasion
+Technique = Impair Defenses
+Technique ID = T1629 (Mobile)
+Procedure = Infamous Chisel - netd checks that it is executed by init and at the path for the legitimate netd.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Defence Evasion
+Technique = Obfuscated Files or Information
+Technique ID = T1406 (Mobile)
+Procedure = Infamous Chisel - blob decompresses executables from bzip archives.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Adversary-in-the-Middle
+Technique ID = T1557
+Procedure = Infamous Chisel - mDNSResponder is deployed alongside this malware and could potentially be used for DNS poisoning.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Credentials from Password Store
+Technique ID = T1634 (Mobile)
+Procedure = Infamous Chisel - netd scrapes multiple files containing credentials and key information.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Network Sniffing
+Technique ID = T1040
+Procedure = Infamous Chisel - tcpdump is deployed alongside this malware and has the ability to sniff network interfaces and monitor network traffic.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Discovery
+Technique = File and Directory Discovery
+Technique ID = T1420 (Mobile)
+Procedure = Infamous Chisel - netd enumerates multiple data directories to discover files of interest.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Discovery
+Technique = Location Tracking
+Technique ID = T1430 (Mobile)
+Procedure = Infamous Chisel - netd collects GPS information.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Discovery
+Technique = Software Discovery
+Technique ID = T1418 (Mobile)
+Procedure = Infamous Chisel - netd collects a list of installed packages.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Discovery
+Technique = System Information Discovery
+Technique ID = T1426 (Mobile)
+Procedure = Infamous Chisel - netd collects various system information such as the Android ID and other hardware information.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Discovery
+Technique = System Network Configuration Discovery
+Technique ID = T1422 (Mobile)
+Procedure = Infamous Chisel - netd collects IP interface configuration information.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Discovery
+Technique = System Network Connections Discovery
+Technique ID = T1421 (Mobile)
+Procedure = Infamous Chisel - netd performs IP scanning of the local network to discover other devices.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Collection
+Technique = Data from Local System
+Technique ID = T1533 (Mobile)
+Procedure = Infamous Chisel - netd automatically collects files from the local system based on a predefined list of file extensions.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Collection
+Technique = Data Staged: Local Data Staging
+Technique ID = T1074.001
+Procedure = Infamous Chisel - netd creates multiple temporary files in the system to hold collected information.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Collection
+Technique = Email Collection: Local Email Collection
+Technique ID = T1114.001
+Procedure = Infamous Chisel - netd exfiltrates files from application and data directories containing communication data.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Application Layer Protocol
+Technique ID = T1437 (Mobile)
+Procedure = Infamous Chisel - db provides SCP functionality.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Encrypted Channel
+Technique ID = T1521 (Mobile)
+Procedure = Infamous Chisel - td is deployed alongside this malware providing a Tor hidden service relaying connections to SSH program.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Protocol Tunnelling
+Technique ID = T1572
+Procedure = Infamous Chisel - td is deployed alongside this malware providing a local Socks connection for db.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Remote Access Software
+Technique ID = T1219
+Procedure = Infamous Chisel - db provides a SSH server and client.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Exfiltration
+Technique = Automated Exfiltration
+Technique ID = T1020
+Procedure = Infamous Chisel - netd automatically exfiltrates files at regular intervals.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Exfiltration
+Technique = Scheduled Transfer
+Technique ID = T1029
+Procedure = Infamous Chisel - netd automatically exfiltrates files at regular intervals.
+
+Title = Infamous Chisel
+Date = 31 August 2023
+Attack Type = Mobile Malware
+Industry =  Ukrainian military
+Actor = Sandworm
+Motivation = Espionage
+Tactic = Impact
+Technique = Service Stop
+Technique ID = T1489
+Procedure = Infamous Chisel - netd replaces the legitimate netd.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Government
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Government
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Government
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Government
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Government
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Government
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Healthcare
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Healthcare
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Healthcare
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Healthcare
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Healthcare
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Healthcare
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Energy
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Energy
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Energy
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Energy
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Energy
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Energy
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Aviation
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Aviation
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Aviation
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Aviation
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Aviation
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Aviation
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Education
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Education
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Education
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Education
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Education
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Education
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Law Enforcement
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Law Enforcement
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Law Enforcement
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Law Enforcement
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Law Enforcement
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Law Enforcement
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Local and State Councils
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Local and State Councils
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Local and State Councils
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Local and State Councils
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Local and State Councils
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Local and State Councils
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Financial Departments
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Financial Departments
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Financial Departments
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Financial Departments
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Financial Departments
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Financial Departments
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Military
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Brute forcing
+Technique ID = T1110
+Procedure = The SVR use password spraying and brute forcing as an initial infection vector.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Military
+Actor = APT29
+Motivation = Espionage
+Tactic = Initial Access
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = The SVR use compromised credentials to gain access to accounts for cloud services including system and dormant accounts.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Military
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Steal Application Access Token
+Technique ID = T1528
+Procedure = The SVR use stolen access tokens to login to accounts without the need for passwords.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Military
+Actor = APT29
+Motivation = Espionage
+Tactic = Credential Access
+Technique = Multi-Factor Authentication Request Generation
+Technique ID = T1621
+Procedure = The SVR repeatedly push MFA requests to a victimâ€™s device until the victim accepts the notification providing SVR access to the account.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Military
+Actor = APT29
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The SVR use open proxies in residential IP ranges to blend in with expected IP address pools in access logs.
+
+Title = SVR cyber actors adapt tactics for initial cloud access
+Date = 26 February 2024
+Attack Type = Cyber Espionage
+Industry = Military
+Actor = APT29
+Motivation = Espionage
+Tactic = Persistence
+Technique = Account Manipulation: Device Registration
+Technique ID = T1098.005
+Procedure = The SVR attempt to register their own device on the cloud tenant after acquiring access to accounts.
+
+Title = Rhythmic Parry
+Date = 10 January 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Unknown
+Tactic = Execution
+Technique = Scheduled Task/Job: Scheduled Task
+Technique ID = T1053.005
+Procedure = Rhythmic Parry has been installed as a Scheduled Task to maintain persistence.
+
+Title = Rhythmic Parry
+Date = 10 January 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Unknown
+Tactic = Defence Evasion
+Technique = Obfuscated Files or Information: Binary Padding
+Technique ID = T1027.001
+Procedure = Rhythmic Parry contains junk code with a consistent pattern including unused exports and indirect calls.
+
+Title = Rhythmic Parry
+Date = 10 January 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Unknown
+Tactic = Defence Evasion
+Technique = Deobfuscate/Decode Files or Information
+Technique ID = T1140
+Procedure = Rhythmic Parry hard-coded configuration strings are XOR-encoded with a 6-byte key then Base64-encoded.
+
+Title = Rhythmic Parry
+Date = 10 January 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Unknown
+Tactic = Command And Control
+Technique = Application Layer Protocol: Web Protocols
+Technique ID = T1071.001
+Procedure = Rhythmic Parry uses HTTP or HTTPS to download a payload from a C2 server.
+
+Title = Rhythmic Parry
+Date = 10 January 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Unknown
+Tactic = Command And Control
+Technique = Encrypted Channel: Symmetric Cryptography
+Technique ID = T1573.001
+Procedure = Rhythmic Parry downloads a second-stage payload which is encrypted using AES-256-CBC with an IV of zero.
+
+Title = Jolly Jellyfish shellcode downloader which also downloads and executes a legitimate file
+Date = 15 December 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage
+Tactic = Defense Evasion
+Technique = Virtualization/Sandbox Evasion: System Checks
+Technique ID = T1497.001
+Procedure = Jolly Jellyfish checks the available memory is greater than 1GB the size of the disk is greater than 1GB and the number of logical processors is greater than 0. These checks are designed to avoid running on a machine with low resources as virtual machines and sandboxes are more likely to have low resources. If these checks fail the process will exit before any malicious behaviour occurs avoiding detection.
+
+Title = Jolly Jellyfish shellcode downloader of XOR-obfuscated shellcode additionally displays a message box on execution
+Date = 15 December 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage
+Tactic = Defense Evasion
+Technique = Virtualization/Sandbox Evasion: Time Based Evasion
+Technique ID = T1497.003
+Procedure = Jolly Jellyfish adds short sleep commands throughout execution which could be an attempt to slow down execution enough to evade detection by automated analysis platforms.
+
+Title = Jolly Jellyfish shellcode downloader of XOR-obfuscated shellcode additionally downloads a legitimate file and displays a message box on execution
+Date = 15 December 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Application Layer Protocol: Web Protocols
+Technique ID = T1071.001
+Procedure = Jolly Jellyfish downloads shellcode over HTTP.
+
+Title = Jolly Jellyfish shellcode downloader
+Date = 15 December 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Data obfuscation
+Technique ID = T1001
+Procedure = Some variants of Jolly Jellyfish download XOR-encoded shellcode. Jolly Jellyfish downloads shellcode contained within bitmap image (BMP) files.
+
+Title = Jolly Jellyfish shellcode downloader
+Date = 19 December 2022
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage
+Tactic = Command and Control
+Technique = Data obfuscation: Steganography
+Technique ID = T1001.002
+Procedure = Jolly Jellyfish downloads shellcode contained within bitmap image (BMP) files.
+
+Title = SpecCom
+Date = 06 September 2021
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage,Disruption
+Tactic = Execution
+Technique = Command and Scripting Interpreter: Windows Command Shell
+Technique ID = T1059.003
+Procedure = SpecCom tasking allows the execution of Windows command-prompt commands.
+
+Title = SpecCom
+Date = 06 September 2021
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage,Disruption
+Tactic = Defense Evasion
+Technique = Obfuscated Files or Information
+Technique ID = T1027
+Procedure = SpecCom configuration strings are XOR obfuscated.
+
+Title = SpecCom
+Date = 06 September 2021
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage,Disruption
+Tactic = Command and Control
+Technique = Application Layer Protocol:Web Protocols
+Technique ID = T1071.001
+Procedure = SpecCom command and control is over HTTP.
+
+Title = SpecCom
+Date = 06 September 2021
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage,Disruption
+Tactic = Command and Control
+Technique = Data Encoding:Standard Encoding
+Technique ID = T1132.001
+Procedure = SpecCom tasking is encoded using Base64.
+
+Title = SpecCom
+Date = 06 September 2021
+Attack Type = Malware
+Industry = Multiple
+Actor = Unknown
+Motivation = Espionage,Disruption
+Tactic = Command and Control
+Technique = Data Obfuscation
+Technique ID = T1001
+Procedure = SpecCom tasking is XOR obfuscated.
+
+Title = Infinite Second
+Date = 03 September 2021
+Attack Type = PowerShell dropper used to deploy ComRAT
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Data exfiltration purposes
+Tactic = Execution
+Technique = Command and Scripting Interpreter: PowerShell
+Technique ID = T1059.001
+Procedure = Infinite Second is a PowerShell script that deploys and sets up persistence for ComRAT.
+
+Title = Infinite Second
+Date = 03 September 2021
+Attack Type = PowerShell dropper used to deploy ComRAT
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Data exfiltration purposes
+Tactic = Persistence
+Technique = Scheduled Task/Job: Scheduled Task
+Technique ID = T1053.005
+Procedure = Infinite Second creates or modifies a scheduled task to run as SYSTEM to launch ComRAT.
+
+Title = Infinite Second
+Date = 03 September 2021
+Attack Type = PowerShell dropper used to deploy ComRAT
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Data exfiltration purposes
+Tactic = Defense Evasion
+Technique = Modify Registry
+Technique ID = T1112
+Procedure = Infinite Second stores cryptographic keys, additional scripts, and obfuscated payloads in the registry.
+
+Title = Infinite Second
+Date = 03 September 2021
+Attack Type = PowerShell dropper used to deploy ComRAT
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Data exfiltration purposes
+Tactic = Defense Evasion
+Technique = Deobfuscate/Decode Files or Information
+Technique ID = T1140
+Procedure = Infinite Second deobfuscates information stored in the registry using 3DES, XOR, and Base64 encoding.
+
+Title = Infinite Second
+Date = 03 September 2021
+Attack Type = PowerShell dropper used to deploy ComRAT
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Data exfiltration purposes
+Tactic = Defense Evasion
+Technique = Masquerading: Match Legitimate Name or Location
+Technique ID = T1036.005
+Procedure = Infinite Second uses registry values that masquerade as legitimate software.
+
+Title = Infinite Second
+Date = 03 September 2021
+Attack Type = PowerShell dropper used to deploy ComRAT
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Data exfiltration purposes
+Tactic = Defense Evasion
+Technique = Indicator Removal on Host: File Deletion
+Technique ID = T1070.004
+Procedure = Infinite Second deletes specific temporary files to evade detection.
+
+Title = Devil Bait
+Date = 20 September 2021
+Attack Type = Malicious macro-enabled Microsoft Word document and VBScript
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Persistence
+Tactic = Execution
+Technique = Command and Scripting Interpreter
+Technique ID = T1059
+Procedure = Devil Bait uses the WScript shell from within other scripts to spawn cmd.exe instances to collect system information.
+
+Title = Devil Bait
+Date = 20 September 2021
+Attack Type = Malicious macro-enabled Microsoft Word document and VBScript
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Persistence
+Tactic = Persistence
+Technique = Scheduled Task/Job: Scheduled Task
+Technique ID = T1053.005
+Procedure = Devil Bait creates a Scheduled Task to beacon every 10 minutes.
+
+Title = Devil Bait
+Date = 20 September 2021
+Attack Type = Malicious macro-enabled Microsoft Word document and VBScript
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Persistence
+Tactic = Command and Control
+Technique = Application Layer Protocol: Web Protocols
+Technique ID = T1071.001
+Procedure = Devil Bait Command and Control is achieved over HTTP using the scripting object ServerXMLHTTP.
+
+Title = Devil Bait
+Date = 20 September 2021
+Attack Type = Malicious macro-enabled Microsoft Word document and VBScript
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Persistence
+Tactic = Exfiltration
+Technique = Exfiltration Over C2 Channel
+Technique ID = T1041
+Procedure = Devil Bait sends system enumeration data over HTTP to the C2 server.
+
+Title = Devil Bait
+Date = 20 September 2021
+Attack Type = Malicious macro-enabled Microsoft Word document and VBScript
+Industry = Unknown
+Actor = Unknown
+Motivation = Espionage, Persistence
+Tactic = Defence Evasion
+Technique = Masquerading: Match Legitimate Name or Location
+Technique ID = T1036.004
+Procedure = Devil Bait masquerades as AhnLab, a legitimate security product, in its persistence mechanism.
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Initial Access (mobile)
+Technique = Masquerade as Legitimate Application
+Technique ID = T1444
+Procedure = Hexed Noodle masquerades as a KISA mobile security app
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Reconnaissance
+Technique = Gather Victim Host Information
+Technique ID = T1592.001
+Procedure = Hexed Noodle beacons contain device hardware information and phone number
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Execution
+Technique = Unix Shell
+Technique ID = T1059.004
+Procedure = Hexed Noodle system commands are executed by passing them to â€˜sh -câ€™
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Execution
+Technique = User Execution
+Technique ID = T1204.002
+Procedure = The user is required to install the Hexed Noodle APK accept permissions and launch the app
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Persistence (mobile)
+Technique = Broadcast Receivers
+Technique ID = T1402
+Procedure = Hexed Noodle subscribes to BOOT_COMPLETED MY_PACKAGE_REPLACED SMS_RECEIVED and PACKAGE_INSTALL broadcasts
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Persistence (mobile)
+Technique = Boot Autostart
+Technique ID = T1547
+Procedure = The Hexed Noodle app starts on receipt of the BOOT_COMPLETED notification
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Defence Evasion (mobile)
+Technique = Obfuscated Files or Information
+Technique ID = T1406
+Procedure = Hexed Noodle configuration is stored in the app as hex encoded strings containing a 16 byte XOR-key prefix â€“ in common with other AppleSeed variants.
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Collection
+Technique = Archive Collected Data Via Library
+Technique ID = T1560.002
+Procedure = Hexed Noodle data is Zip compressed before encryption using standard libraries
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Collection
+Technique = Data from Local System
+Technique ID = T1005
+Procedure = Hexed Noodle collects SMS messages and certain filesystem documents
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Collection 
+Technique = Automated Collection
+Technique ID = T1119
+Procedure = Hexed Noodle regularly scans file and SMS directories for changes to trigger exfiltration
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Collection(mobile)
+Technique = Capture SMS Messages
+Technique ID = T1412
+Procedure = Hexed Noodle collects both stored and incoming SMS messages possibly enabling the bypass of SMS-based two-factor authentication
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Discovery(mobile)
+Technique = File and Directory Discovery
+Technique ID = T1420
+Procedure = Hexed Noodle contains a command to list filesystem contents
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Command and Control
+Technique = Web Protocols
+Technique ID = T1071.001
+Procedure = Hexed Noodle uses HTTP requests for tasking and exfiltration
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Exfiltration
+Technique = Data Transfer Size Limits
+Technique ID = T1030
+Procedure = Hexed Noodle uploads files in chunks of at most 10MB
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Exfiltration
+Technique = Exfiltration over C2 Channel
+Technique ID = T1041
+Procedure = Hexed Noodle exfiltration and tasking are HTTP POST requests to the same server with different parameters
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Exfiltration (mobile)
+Technique = Data Encrypted
+Technique ID = T1532
+Procedure = Hexed Noodle exfiltrated data is encrypted, prepended with the 16 byte XOR key and Hex encoded
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Exfiltration (mobile)
+Technique = Standard Application Layer Protocol
+Technique ID = T1437
+Procedure = Hexed Noodle exfiltrates data using HTTP POST requests
+
+Title = Hexed Noodle
+Date = 26 July 2021
+Attack Type = Malware
+Industry = Security
+Actor = Unknown
+Motivation = Unknown
+Tactic = Impact (mobile)
+Technique = SMS Control
+Technique ID = T1582
+Procedure = Hexed Noodle enables the operator to send SMS messages from the victim device
+
+Title = Wishful Woodchuck
+Date = 28 July 2021
+Attack Type = Keylogging
+Industry = Unknown
+Actor = Turla
+Motivation = Unknown
+Tactic = Collection
+Technique = Input Capture: Keylogging
+Technique ID = T1056.001
+Procedure = Wishful Woodchuck uses Windows API calls to log keystrokes
+
+Title = Wishful Woodchuck
+Date = 28 July 2021
+Attack Type = Keylogging
+Industry = Unknown
+Actor = Turla
+Motivation = Unknown
+Tactic = Defense Evasion
+Technique = Obfuscated Files or Information
+Technique ID = T1027
+Procedure = Wishful Woodchuck uses multi-byte XOR obfuscation of strings in its binary and log file
+
+Title = Wishful Woodchuck
+Date = 28 July 2021
+Attack Type = Keylogging
+Industry = Unknown
+Actor = Turla
+Motivation = Unknown
+Tactic = Defense Evasion
+Technique = Obfuscated Files or Information
+Technique ID = T1027
+Procedure = Wishful Woodchuck dynamically resolves Windows API functions using names XORed with 0x55
+
+Title = Wishful Woodchuck
+Date = 28 July 2021
+Attack Type = Keylogging
+Industry = Unknown
+Actor = Turla
+Motivation = Unknown
+Tactic = Defense Evasion
+Technique = Masquerading: Match Legitimate Name or Location
+Technique ID = T1036.005
+Procedure = Wishful Woodchuck uses a filename (lmm32.dll) similar to a legitimate Windows signed binary (imm32.dll)
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Gather Victim Host Information
+Technique ID = T1592
+Procedure = Volt Typhoon conducts extensive pre-compromise reconnaissance. This includes web searches, including victim owned sites, for victim host, identity, and network information, especially for information on key network and IT administrators.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Gather Victim Identity Information
+Technique ID = T1589
+Procedure = Volt Typhoon conducts extensive pre-compromise reconnaissance to learn about the target organization’s staff.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Gather Victim Identity Information: Email Addresses
+Technique ID = T1589.002
+Procedure = Volt Typhoon targets the personal emails of key network and IT staff.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Gather Victim Network Information
+Technique ID = T1590
+Procedure = Volt Typhoon conducts extensive pre-compromise reconnaissance to learn about the target organization’s network.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Gather Victim Org Information
+Technique ID = T1591
+Procedure = Volt Typhoon conducts extensive pre-compromise reconnaissance to learn about the target organization.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Search Open Websites/Domains
+Technique ID = T1593
+Procedure = Volt Typhoon conducts extensive pre-compromise reconnaissance. This includes web searches, including victim owned sites, for victim host, identity, and network information, especially for information on key network and IT administrators.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Reconnaissance
+Technique = Search Victim-Owned Websites
+Technique ID = T1594
+Procedure = Volt Typhoon conducts extensive pre-compromise reconnaissance. This includes web searches, including victim owned sites, for victim host, identity, and network information, especially for information on key network and IT administrators.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Resource Development
+Technique = Acquire Infrastructure: Botnet
+Technique ID = T1583.003
+Procedure = Volt Typhoon uses multi-hop proxies for command-and-control infrastructure. The proxy is typically composed of Virtual Private Servers (VPSs) or small office/home office (SOHO) routers.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Resource Development
+Technique = Compromise Infrastructure: Botnet
+Technique ID = T1584.005
+Procedure = Volt Typhoon used Cisco and NETGEAR end-of-life SOHO routers implanted with KV Botnet malware to support their operations.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Resource Development
+Technique = Compromise Infrastructure: Server
+Technique ID = T1584.004
+Procedure = Volt Typhoon has redirected specific port traffic to their proxy infrastructure, effectively converting the PRTG’s Detection Guidance server into a proxy for their C2 traffic.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Resource Development
+Technique = Develop Capabilities: Exploits
+Technique ID = T1587.004
+Procedure = Volt Typhoon uses publicly available exploit code, but is also adept at discovering and exploiting vulnerabilities as zero days.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Resource Development
+Technique = Obtain Capabilities: Exploits
+Technique ID = T1588.005>
+Procedure = Volt Typhoon uses publicly available exploit code, but is also adept at discovering and exploiting vulnerabilities as zero days.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Initial Access
+Technique = Exploit Public-Facing Application
+Technique ID = T1190
+Procedure = Volt Typhoon commonly exploits vulnerabilities in networking appliances such as Fortinet, Ivanti (formerly Pulse Secure), NETGEAR, Citrix, and Cisco.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Initial Access
+Technique = External Remote Services
+Technique ID = T1133
+Procedure = Volt Typhoon often uses VPN sessions to securely connect to victim environments, enabling discreet follow-on intrusion activities.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Execution
+Technique = Command and Scripting Interpreter
+Technique ID = T1059
+Procedure = Volt Typhoon uses hands-on-keyboard execution for their malicious activity via the command-line.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Execution
+Technique = Command and Scripting Interpreter: PowerShell
+Technique ID = T1059.001>
+Procedure = Volt Typhoon has executed clients via PowerShell.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Execution
+Technique = Command and Scripting Interpreter: Unix Shell
+Technique ID = T1059.004
+Procedure = Volt Typhoon has used Brightmetricagent.exe, which contains multiplexer libraries that can bi-directionally stream data over through NAT networks and contains a commandline interface (CLI) library that can leverage command shells such as PowerShell, Windows Management, Instrumentation (WMI), and Z Shell (zsh).
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Execution
+Technique = Windows Management Instrumentation
+Technique ID = T1047
+Procedure = Volt Typhoon has used Windows Management Instrumentation Console (WMIC) commands.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Persistence
+Technique = Valid Accounts
+Technique ID = T1078>
+Procedure = Volt Typhoon primarily relies on valid credentials for persistence.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Privilege Escalation
+Technique = Exploitation for Privilege Escalation
+Technique ID = T1068
+Procedure = Volt Typhoon first obtains credentials from public-facing appliances after gaining initial access by exploiting privilege escalation vulnerabilities in the operating system or network services.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Direct Volume Access
+Technique ID = T1006
+Procedure = Volt Typhoon has executed the Windows-native vssadmin command to create a volume shadow copy.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Indicator Removal: Clear Persistence
+Technique ID = T1070.009
+Procedure = Volt Typhoon has selectively cleared Windows Event Logs, system logs, and other technical artifacts to remove evidence of their intrusion activity and masquerading file names.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Indicator Removal: Clear Windows Event Logs
+Technique ID = T1070.001
+Procedure = Volt Typhoon has selectively cleared Windows Event Logs, system logs, and other technical artifacts to remove evidence of their intrusion activity and masquerading file names.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Indicator Removal: File Deletion
+Technique ID = T1070.004
+Procedure = Volt Typhoon created systeminfo.dat in C:\Users\Public\Documents, but subsequently deleted it.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Masquerading: Match Legitimate Name or Location
+Technique ID = T1036.005
+Procedure = Volt Typhoon has selectively cleared Windows Event Logs, system logs, and other technical artifacts to remove evidence of their intrusion activity and masquerading file names.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Modify Registry
+Technique ID = T1112
+Procedure = Volt Typhoon has used the netsh command, a legitimate Windows command, to create a PortProxy registry modification on the PRTG server.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = Obfuscated Files or Information: Software Packing
+Technique ID = T1027.002
+Procedure = Volt Typhoon has obfuscated FRP client files (BrightmetricAgent.exe and SMSvcService.exe) and the command-line port scanning utility ScanLine by packing the files with Ultimate Packer for Executables (UPX).
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Defense Evasion Defense Evasion
+Technique = System Binary Proxy Execution
+Technique ID = T1218
+Procedure = Volt Typhoon uses hands-on-keyboard activity via the command-line and use other native tools and processes on systems (often referred to as “LOLBins”), known as LOTL, to maintain and expand access to the victim networks.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = Brute Force: Password Cracking
+Technique ID = T1110.002
+Procedure = Volt Typhoon has exfiltrated NTDS.dit and SYSTEM registry hive to crack passwords offline.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = Credentials from Password Stores
+Technique ID = T1555
+Procedure = Volt Typhoon has installed browsers saved passwords history, credit card details, and cookies.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = Credentials from Password Stores: Credentials from Web Browsers
+Technique ID = T1555.003
+Procedure = Volt Typhoon has strategically targeted network administrator web browser data, focusing on both browsing history and stored credentials.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = OS Credential Dumping: LSASS Memory
+Technique ID = T1003.001
+Procedure = Volt Typhoon used a DLL with MiniDump and the process ID of Local Security Authority Subsystem Service (LSASS) to dump the LSASS process memory and obtain credentials.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = OS Credential Dumping: NTDS
+Technique ID = T1003.003
+Procedure = Volt Typhoon appears to prioritize obtaining valid credentials by extracting the Active Directory database file (NTDS.dit).
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = Unsecured Credentials
+Technique ID = T1552
+Procedure = Volt Typhoon has obtained credentials insecurely stored on an appliance.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Credential Access
+Technique = Unsecured Credentials: Private Keys
+Technique ID = T1552.004
+Procedure = Volt Typhoon has accessed a Local State file that contains the Advanced Encryption Standard (AES) encryption key used to encrypt the passwords stored in the Chrome browser, which enables the actors to obtain plaintext passwords stored in the Login Data file in the Chrome browser.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Account Discovery: Local Account
+Technique ID = T1087.001
+Procedure = Volt Typhoon executed net user and quser for user account information.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Application Window Discovery
+Technique ID = T1010
+Procedure = Volt Typhoon created and accessed a file named rult3uil.log on a Domain Controller in C:\Windows\System32\. The rult3uil.log file contained user activities on a compromised system, showcasing a combination of window title information and focus shifts, keypresses, and command executions across Google Chrome and Windows PowerShell, with corresponding timestamps.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Browser Information Discovery
+Technique ID = T1217
+Procedure = Volt Typhoon has installed browsers saved passwords history, credit card details, and cookies.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = File and Directory Discovery
+Technique ID = T1083
+Procedure = Volt Typhoon enumerated several directories, including directories containing vulnerability testing and cyber related content and facilities data, such as construction drawings.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Log Enumeration
+Technique ID = T1654
+Procedure = Volt Typhoon has captured successful logon events.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Network Service Discovery
+Technique ID = T1046
+Procedure = Volt Typhoon has used commercial tools, LOTL utilities, and appliances already present on the system for system information, network service, group, and user discovery.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Peripheral Device Discovery
+Technique ID = T1120
+Procedure = Volt Typhoon has obtained the victim's system screen dimension and display devices information.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Permission Groups Discovery
+Technique ID = T1069
+Procedure = Volt Typhoon has used commercial tools, LOTL utilities, and appliances already present on the system for system information, network service, group, and user discovery.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Process Discovery
+Technique ID = T1057
+Procedure = Volt Typhoon executed tasklist /v to gather a detailed process listing.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Query Registry
+Technique ID = T1012
+Procedure = Volt Typhoon has interacted with a PuTTY application by enumerating existing stored sessions.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = Software Discovery
+Technique ID = T1518
+Procedure = Volt Typhoon has obtained the victim's list of applications installed on the victim's system.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = System Information Discovery
+Technique ID = T1082
+Procedure = Volt Typhoon has used commercial tools, LOTL utilities, and appliances already present on the system for system information, network service, group, and user discovery.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = System Location Discovery
+Technique ID = T1614
+Procedure = Volt Typhoon has obtained the victim's system current locale.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = System Network Configuration Discovery: Internet Connection Discovery
+Technique ID = T1016.001
+Procedure = Volt Typhoon employs ping with various IP addresses to check network connectivity and net start to list running services.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = System Owner/User Discovery
+Technique ID = T1033
+Procedure = Volt Typhoon has used commercial tools, LOTL utilities, and appliances already present on the system for system information, network service, group, and user discovery.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = System Service Discovery
+Technique ID = T1007
+Procedure = Volt Typhoon employs ping with various IP addresses to check network connectivity and net start to list running services.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Discovery
+Technique = System Time Discovery
+Technique ID = T1124
+Procedure = Volt Typhoon has obtained the victim's system timezone.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Lateral Movement
+Technique = Remote Service Session Hijacking
+Technique ID = T1563
+Procedure = Volt Typhoon potentially had access to a range of critical PuTTY profiles, including those for water treatment plants, water wells, an electrical substation, operational technology systems, and network security devices. This would enable them to access these critical systems.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Lateral Movement
+Technique = Remote Services: Cloud Services
+Technique ID = T1021.007
+Procedure = During the period of Volt Typhoon’s known network presence, there were anomalous login attempts to an Azure tenant potentially using credentials previously compromised from theft of NTDS.dit.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Lateral Movement
+Technique = Remote Services: Remote Desktop Protocol
+Technique ID = T1021.001
+Procedure = Volt Typhoon has moved laterally to the Domain Controller via an interactive RDP session using a compromised account with domain administrator privileges.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Lateral Movement
+Technique = Use Alternate Authentication Material
+Technique ID = T1550
+Procedure = Volt Typhoon may be capable of using other methods such as Pass the Hash or Pass the Ticket for lateral movement.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Lateral Movement
+Technique = Valid Accounts: Cloud Accounts
+Technique ID = T1078.004
+Procedure = During the period of Volt Typhoon’s known network presence, there were anomalous login attempts to an Azure tenant potentially using credentials previously compromised from theft of NTDS.dit.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Collection
+Technique = Archive Collected Data
+Technique ID = T1560
+Procedure = Volt Typhoon collected sensitive information obtained from a file server in multiple zipped files.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Collection
+Technique = Archive Collected Data: Archive via Utility
+Technique ID = T1560.001
+Procedure = Volt Typhoon has compressed and archived the extracted ntds.dit and accompanying registry files (by executing ronf.exe, which was likely a renamed version of rar.exe).
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Collection
+Technique = Data Staged
+Technique ID = T1074
+Procedure = Volt Typhoon accessed the file C:\Users\{redacted}\Downloads\History.zip, which presumably contained data from the User Data directory of the user’s Chrome browser, which the actors likely saved in the Downloads directory for exfiltration.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Collection
+Technique = Screen Capture
+Technique ID = T1113
+Procedure = Volt Typhoon has obtained a screenshot of the victim's system using two libraries (gdi32.dll and gdiplus.dll)
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Command and Control
+Technique = Encrypted Channel
+Technique ID = T1573
+Procedure = Volt Typhoon has setup FRP clients on a victim’s corporate infrastructure to establish covert communications channels for command and control.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Command and Control
+Technique = Ingress Tool Transfer
+Technique ID = T1105
+Procedure = Volt Typhoon uses legitimate, but outdated versions of network admin tools. For example, in one confirmed compromise, actors downloaded an outdated version of comsvcs.dll, on the DC in a non-standard folder.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Command and Control
+Technique = Proxy
+Technique ID = T1090
+Procedure = Volt Typhoon has setup FRP clients on a victim’s corporate infrastructure to establish covert communications channels for command and control.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Command and Control
+Technique = Proxy: Internal Proxy
+Technique ID = T1090.001
+Procedure = Volt Typhoon has used the netsh command, a legitimate Windows command, to create a PortProxy registry modification on the PRTG server.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Command and Control
+Technique = Proxy: Multi-hop Proxy
+Technique ID = T1090.003
+Procedure = Volt Typhoon uses multi-hop proxies for command-and-control infrastructure.
+
+Title = PRC state-sponsored actors compromise and maintain persistent access to U.S. critical infrastructure
+Date = 08 February 2024
+Attack Type = DUMMY
+Industry = Communications, Energy, Transportation Systems, and Water and Wastewater Systems
+Actor = Volt Typhoon
+Motivation = pre-positioning themselves on IT networks to enable lateral movement to OT assets to disrupt functions
+Tactic = Exfiltration
+Technique = Exfiltration Over Alternative Protocol
+Technique ID = T1048
+Procedure = Volt Typhoon exfiltrated files via Server Message Block (SMB).
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Initial Access
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = Play ransomware actors obtain and abuse existing account credentials to gain initial access.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Initial Access
+Technique = Exploit Public Facing Application
+Technique ID = T1190
+Procedure = Play ransomware actors exploit vulnerabilities in internet-facing systems to gain access to networks.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Initial Access
+Technique = External Remote Services
+Technique ID = T1133
+Procedure = Play ransomware actors have used remote access services, such as RDP/VPN connection to gain initial access.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Discovery
+Technique = System Network Configuration Discovery
+Technique ID = T1016
+Procedure = Play ransomware actors use tools like Grixba to identify network configurations and settings.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Discovery
+Technique = Software Discovery: Security Software Discovery
+Technique ID = T1518.001
+Procedure = Play ransomware actors scan for anti-virus software.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Defense Evasion
+Technique = Impair Defenses: Disable or Modify Tools
+Technique ID = T1562.001
+Procedure = Play ransomware actors use tools like GMER, IOBit, and PowerTool to disable anti-virus software.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Defense Evasion
+Technique = Indicator Removal: Clear Windows Event Logs
+Technique ID = T1070.001
+Procedure = Play ransomware actors delete logs or other indicators of compromise to hide intrusion activity.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Credential Access
+Technique = Unsecured Credentials
+Technique ID = T1552
+Procedure = Play ransomware actors attempt to identify and exploit credentials stored unsecurely on a compromised network.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Credential Access
+Technique = OS Credential Dumping
+Technique ID = T1003
+Procedure = Play ransomware actors use tools like Mimikatz to dump credentials.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Lateral Movement
+Technique = Lateral Tool Transfer
+Technique ID = T1570
+Procedure = Play ransomware actors distribute executables within the compromised environment.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Command and Control
+Technique = Domain Policy Modification: Group Policy Modification
+Technique ID = T1484.001
+Procedure = Play ransomware actors distribute executables via Group Policy Objects.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Collection
+Technique = Archive Collected Data: Archive via Utility
+Technique ID = T1560.001
+Procedure = Play ransomware actors use tools like WinRAR to compress files.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Exfiltration
+Technique = Exfiltration Over Alternative Protocol
+Technique ID = T1048
+Procedure = Play ransomware actors use file transfer tools like WinSCP to transfer data.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Impact
+Technique = Data Encrypted for Impact
+Technique ID = T1486
+Procedure = Play ransomware actors encrypt data on target systems to interrupt availability to system and network resources.
+
+Title = #StopRansomware: Play ransomware
+Date = 19 December 2023
+Attack Type = malware
+Industry = infrasture, businesses
+Actor = Play ransomware
+Motivation = guarantee the secrecy of deals
+Tactic = Impact
+Technique = Financial Theft
+Technique ID = T1657
+Procedure = Play ransomware actors use a double-extortion model for financial gain.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Reconnaissance
+Technique = Search Open Websites/Domains
+Technique ID = T1593
+Procedure = Star Blizzard uses open-source research and social media to identify information about victims to use in targeting.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Reconnaissance
+Technique = Gather Victim Identity Information
+Technique ID = T1589
+Procedure = Star Blizzard uses online data sets and open-source resources to gather information about their targets.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Resource Development
+Technique = Establish Accounts: Social Media Accounts
+Technique ID = T1585.001
+Procedure = Star Blizzard has been observed establishing fraudulent profiles on professional networking sites to conduct reconnaissance.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Resource Development
+Technique = Establish Accounts: Email Accounts
+Technique ID = T1585.002
+Procedure = Star Blizzard registers consumer email accounts matching the names of individuals they are impersonating to conduct spear-phishing activity.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Resource Development
+Technique = Acquire Infrastructure: Domains
+Technique ID = T1583.001
+Procedure = Star Blizzard registers domains to host their phishing framework.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Resource Development
+Technique = Compromise Accounts: Email Accounts
+Technique ID = T1586.002
+Procedure = Star Blizzard has been observed using compromised victim email accounts to conduct spear-phishing activity against contacts of the original victim.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Initial Access
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = Star Blizzard uses compromised credentials, captured from fake log-in pages, to log in to valid victim user accounts.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Initial Access
+Technique = Phishing: Spear-phishing Attachment
+Technique ID = T1566.001
+Procedure = Star Blizzard uses malicious links embedded in email attachments to direct victims to their credential-stealing sites.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Initial Access
+Technique = Phishing: Spear-phishing Link
+Technique ID = T1566.002
+Procedure = Star Blizzard sends spear-phishing emails with malicious links directly to credential-stealing sites, or to documents hosted on a file-sharing site, which then direct victims to credential-stealing sites.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Defence Evasion
+Technique = Use Alternate Authentication Material: Web Session Cookie
+Technique ID = T1550.004
+Procedure = Star Blizzard bypasses multi-factor authentication on victim email accounts by using session cookies stolen using EvilGinx.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Credential Access
+Technique = Steal Web Session Cookie
+Technique ID = T1539
+Procedure = Star Blizzard uses EvilGinx to steal the session cookies of victims directed to their fake log-in domains.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Collection
+Technique = Email Collection: Remote Email Collection
+Technique ID = T1114.002
+Procedure = Star Blizzard interacts directly with externally facing Exchange services, Office 365 and Google Workspace to access email and steal information using compromised credentials or access tokens.
+
+Title = Russian FSB cyber actor Star Blizzard continues worldwide spear-phishing campaigns
+Date = 08 December 2023
+Attack Type = DUMMY
+Industry = academia, defence, governmental organisations, NGOs, think-tanks and politicians
+Actor = Star Blizzard
+Motivation = an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.
+Tactic = Collection
+Technique = Email Collection: Email Forwarding Rule
+Technique ID = T1114.003
+Procedure = Star Blizzard abuses email-forwarding rules to monitor the activities of a victim, steal information, and maintain persistent access to victim's emails, even after compromised credentials are reset.
+
+Title = #StopRansomware: LockBit 3.0 Ransomware Affiliates Exploit CVE 2023-4966 Citrix Bleed Vulnerability
+Date = 22 November 2023
+Attack Type = malware
+Industry = infrastructure sectors, including education, energy, financial services, food and agriculture, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit 3.0
+Motivation = obtain initial access to Boeing Distribution Inc.,
+Tactic = Discovery
+Technique = System Information Discovery
+Technique ID = T1082
+Procedure = Threat actors will attempt to obtain information about the operating system and hardware, including versions, and patches.
+
+Title = #StopRansomware: LockBit 3.0 Ransomware Affiliates Exploit CVE 2023-4966 Citrix Bleed Vulnerability
+Date = 22 November 2023
+Attack Type = malware
+Industry = infrastructure sectors, including education, energy, financial services, food and agriculture, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit 3.0
+Motivation = obtain initial access to Boeing Distribution Inc.,
+Tactic = Credential Access
+Technique = Modify Authentication Process: Multifactor Authentication
+Technique ID = T1556.006
+Procedure = Threat actors leverage vulnerabilities found within CVE- to compromise, modify, and/or bypass multifactor authentication to hijack user sessions, harvest credentials, and move laterally, which enables persistent access.
+
+Title = #StopRansomware: LockBit 3.0 Ransomware Affiliates Exploit CVE 2023-4966 Citrix Bleed Vulnerability
+Date = 22 November 2023
+Attack Type = malware
+Industry = infrastructure sectors, including education, energy, financial services, food and agriculture, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit 3.0
+Motivation = obtain initial access to Boeing Distribution Inc.,
+Tactic = Credential Access
+Technique = Steal Web Session Cookie
+Technique ID = T1539
+Procedure = Threat actors with access to valid cookies can establish an authenticated session within the NetScaler appliance without a username, password, or access to multifactor authentication (MFA) tokens.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Initial Access
+Technique = Drive-by Compromise
+Technique ID = T1189
+Procedure = LockBit affiliates gain access to a system through a user visiting a website over the normal course of browsing.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Initial Access
+Technique = Exploit Public-Facing Application
+Technique ID = T1190
+Procedure = LockBit affiliates may exploit vulnerabilities (e.g., Log4Shell) in internet-facing systems to gain access to victims’ systems.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Initial Access
+Technique = External Remote Services
+Technique ID = T1133
+Procedure = LockBit affiliates exploit RDP to gain access to victims’ networks.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Initial Access
+Technique = Phishing
+Technique ID = T1566
+Procedure = LockBit affiliates use phishing and spearphishing to gain access to victims' networks.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Initial Access
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = LockBit affiliates obtain and abuse credentials of existing accounts as a means of gaining initial access.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Execution
+Technique = Execution
+Technique ID = TA0002
+Procedure = LockBit 3.0 launches commands during its execution.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Execution
+Technique = Command and Scripting Interpreter: Windows Command Shell
+Technique ID = T1059.003
+Procedure = LockBit affiliates use batch scripts to execute malicious commands.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Execution
+Technique = Software Deployment Tools
+Technique ID = T1072
+Procedure = LockBit affiliates may use Chocolatey, a command-line package manager for Windows.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Execution
+Technique = System Services: Service Execution
+Technique ID = T1569.002
+Procedure = LockBit 3.0 uses PsExec to execute commands or payloads.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Persistence
+Technique = Boot or Logon Autostart Execution
+Technique ID = T1547
+Procedure = LockBit affiliates enables automatic logon for persistence.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Persistence
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = LockBit affiliates may use a compromised user account to maintain persistence on the target network.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Privilege Escalation
+Technique = Privilege Escalation
+Technique ID = TA0004
+Procedure = LockBit affiliates will attempt to escalate to the required privileges if current account privileges are insufficient.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Privilege Escalation
+Technique = Abuse Elevation Control Mechanism
+Technique ID = T1548
+Procedure = LockBit affiliates may use ucmDccwCOM Method in UACMe, a GitHub collection of User Account Control (UAC) bypass techniques.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Privilege Escalation
+Technique = Boot or Logon Autostart Execution
+Technique ID = T1547
+Procedure = LockBit affiliates enable automatic logon for privilege escalation.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Privilege Escalation
+Technique = Domain Policy Modification: Group Policy Modification
+Technique ID = T1484.001
+Procedure = LockBit affiliates may create Group Policy for lateral movement and can force group policy updates.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Privilege Escalation
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = LockBit affiliates may use a compromised user account to escalate privileges on a victim’s network.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Execution Guardrails: Environmental Keying
+Technique ID = T1480.001
+Procedure = LockBit 3.0 will only decrypt the main component or continue to decrypt and/or decompress data if the correct password is entered.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Impair Defenses: Disable or Modify Tools
+Technique ID = T1562.001
+Procedure = LockBit 3.0 affiliates use Backstab, Defender Control, GMER, PCHunter, PowerTool, Process Hacker or TDSSKiller to disable EDR processes and services. LockBit 3.0 affiliates use Bat Armor to bypass the PowerShell execution Policy. LockBit affiliates may deploy a batch script, 123.bat, to disable and uninstall antivirus software. Lockbit 3.0 may modify and/or disable security tools including EDR and antivirus to avoid possible detection of malware, tools, and activities.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Indicator Removal: Clear Windows Event Logs
+Technique ID = T1070.001
+Procedure = LockBit executable clears the Windows Event Logs files.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Indicator Removal: File Deletion
+Technique ID = T1070.004
+Procedure = LockBit 3.0 will delete itself from the disk.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Obfuscated Files or Information
+Technique ID = T1027
+Procedure = LockBit 3.0 will send encrypted host and bot information to its command and control (C2) servers.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Obfuscated Files or Information: Software Packing
+Technique ID = T1027.002
+Procedure = LockBit affiliates may perform software packing or virtual machine software protection to conceal their code. Blister Loader has been used for such purpose.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = Brute Force
+Technique ID = T1110
+Procedure = LockBit affiliates may leverage VPN or RDP brute force credentials as an initial access.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = Credentials from Password Stores: Credentials from Web Browsers
+Technique ID = T1555.003
+Procedure = LockBit 3.0 actors use PasswordFox to recover passwords from Firefox Browser.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = OS Credential Dumping
+Technique ID = T1003
+Procedure = LockBit 3.0 actors use ExtPassword or LostMyPassword to recover passwords from Windows systems.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = OS Credential Dumping: LSASS Memory
+Technique ID = T1003.001
+Procedure = LockBit affiliates may use Microsoft Sysinternals ProDump to dump the contents of lsass.exe. LockBit affiliates have used Mimikatz to dump credentials.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Discovery
+Technique = Network Service Discovery
+Technique ID = T1046
+Procedure = LockBit affiliates use SoftPerfect Network Scanner, Advanced IP Scanner, or Advanced Port Scanner to scan target networks. LockBit affiliates may use SoftPerfect Network Scanner, Advanced Port Scanner, and AdFind to enumerate connected machines in the network.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Discovery
+Technique = System Information Discovery
+Technique ID = T1082
+Procedure = LockBit affiliates will enumerate system information to include hostname, host configuration, domain information, local drive configuration, remote shares, and mounted external storage devices.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Discovery
+Technique = System Location Discovery: System Language Discovery
+Technique ID = T1614.001
+Procedure = LockBit 3.0 will not infect machines with language settings that match a defined exclusion list.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Lateral Movement
+Technique = Lateral Movement
+Technique ID = TA0008
+Procedure = LockBit affiliates will laterally move across networks and access domain controllers.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Lateral Movement
+Technique = Remote Services: Remote Desktop Protocol
+Technique ID = T1021.001
+Procedure = LockBit affiliates use Splashtop remote-desktop software to facilitate lateral movement.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Lateral Movement
+Technique = Remote Services: Server Message Block (SMB)/Admin Windows Shares
+Technique ID = T1021.002
+Procedure = LockBit affiliates may use Cobalt Strike and target SMB shares for lateral movement.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Collection
+Technique = Application Layer Protocol: File Transfer Protocols
+Technique ID = T1071.002
+Procedure = LockBit affiliates may use FileZilla for C2.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Collection
+Technique = Application Layer Protocol: Web Protocols
+Technique ID = T1071.001
+Procedure = LockBit affiliates use ThunderShell as a remote access tool that communicates via HTTP requests.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Collection
+Technique = Non-Application Layer Protocol
+Technique ID = T1095
+Procedure = LockBit affiliates use Ligolo to establish SOCKS5 or TCP tunnels from a reverse connection.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Collection
+Technique = Protocol Tunneling
+Technique ID = T1572
+Procedure = LockBit affiliates use Plink to automate SSH actions on Windows.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Collection
+Technique = Remote Access Software
+Technique ID = T1219
+Procedure = LockBit 3.0 actors use AnyDesk, Atera RMM, ScreenConnect or TeamViewer for C2.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Exfiltration
+Technique = Exfiltration
+Technique ID = TA0010
+Procedure = LockBit affiliates use StealBit, a custom exfiltration tool first used with LockBit 2.0, to steal data from a target network.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Exfiltration
+Technique = Exfiltration Over Web Service
+Technique ID = T1567
+Procedure = LockBit affiliates use publicly available file sharing services to exfiltrate a target’s data.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Exfiltration
+Technique = Exfiltration Over Web Service: Exfiltration to Cloud Storage
+Technique ID = T1567.002
+Procedure = LockBit affiliates use (1) Rclone, an open-source command line cloud storage manager or FreeFileSync to exfiltrate and(2) MEGA, a publicly available file sharing service for data exfiltration.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Impact
+Technique = Data Destruction
+Technique ID = T1485
+Procedure = LockBit 3.0 deletes log files and empties the recycle bin.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Impact
+Technique = Data Encrypted for Impact
+Technique ID = T1486
+Procedure = LockBit 3.0 encrypts data on target systems to interrupt availability to system and network resources. LockBit affiliates can encrypt Windows and Linux devices, as well as VMware instances.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Impact
+Technique = Defacement: Internal Defacement
+Technique ID = T1491.001
+Procedure = LockBit 3.0 changes the host system’s wallpaper and icons to the LockBit 3.0 wallpaper and icons, respectively.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Impact
+Technique = Inhibit System Recovery
+Technique ID = T1490
+Procedure = LockBit 3.0 deletes volume shadow copies residing on disk.
+
+Title = Understanding Ransomware Threat Actors: LockBit
+Date = 15 June 2023
+Attack Type = malware
+Industry = financial services, food and agriculture, education, energy, government and emergency services, healthcare, manufacturing, and transportation
+Actor = LockBit
+Motivation = DUMMY
+Tactic = Impact
+Technique = Service Stop
+Technique ID = T1489
+Procedure = LockBit 3.0 terminates processes and services.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Initial Access
+Technique = Exploit Public-facing Application
+Technique ID = T1190
+Procedure = Actor used public-facing applications to gain initial access to systems; in this case, Earthworm and PortProxy.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Execution
+Technique = Windows Management Instrumentation
+Technique ID = T1047
+Procedure = The actor executed WMIC commands to create a copy of the SYSTEM registry.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Execution
+Technique = Command and Scripting Interpreter: PowerShell
+Technique ID = T1059.001
+Procedure = The actor used a PowerShell command to identify successful logons to the host.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Execution
+Technique = Command and Scripting Interpreter: Windows Command Shell
+Technique ID = T1059.003
+Procedure = The actor used this primary command prompt to execute a query that collected information about the storage devices on the local host.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Persistence
+Technique = Server Software Component: Web Shell
+Technique ID = T1505.003
+Procedure = The actor used backdoor web servers with web shells to establish persistence to systems, including some of the webshells being derived from Awen webshell.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Indicator Removal
+Technique ID = T1070
+Procedure = The actor selectively cleared Windows Event Logs, system logs, and other technical artifacts to remove evidence of their intrusion activity.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Defense Evasion
+Technique = Indicator Removal: Clear Windows Event Logs
+Technique ID = T1070.001
+Procedure = The actor cleared system event logs to hide activity of an intrusion.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = OS Credential Dumping: NTDS
+Technique ID = T1003.003
+Procedure = The actor may try to exfiltrate the ntds.dit file and the SYSTEM registry hive out of the network to perform password cracking.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = Brute Force
+Technique ID = T1110
+Procedure = The actor attempted to gain access to accounts with multiple password attempts.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = Brute Force: Password Spraying
+Technique ID = T1110.003
+Procedure = The actor used commonly used passwords against accounts to attempt to acquire valid credentials.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = OS Credential Dumping
+Technique ID = T1003
+Procedure = The actor used additional commands to obtain credentials in the environment.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Credential Access
+Technique = Credentials from Password Stores
+Technique ID = T1555
+Procedure = The actor searched for common password storage locations.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Discovery
+Technique = System Information Discovery
+Technique ID = T1082
+Procedure = The actor executed commands to gather information about local drives.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Discovery
+Technique = System Owner/User Discovery
+Technique ID = T1033
+Procedure = The actor gathered information about successful logons to the host using a PowerShell command.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Discovery
+Technique = Permission Groups Discovery: Local Groups
+Technique ID = T1069.001
+Procedure = The actor attempt to find local system groups and permission settings.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Discovery
+Technique = Permission Groups Discovery: Doman Groups
+Technique ID = T1069.002
+Procedure = The actor used commands to enumerate the active directory structure.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Discovery
+Technique = System Network Configuration Discovery
+Technique ID = T1016
+Procedure = The actor used commands to enumerate the network topology.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Command and Control
+Technique = Proxy
+Technique ID = T1090
+Procedure = The actor used commands to enable port forwarding on the host.
+
+Title = People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection
+Date = 25 May 2023
+Attack Type = DUMMY
+Industry = U.S. critical infrastructure sectors
+Actor = Volt Typhoon
+Motivation = DUMMY
+Tactic = Command and Control
+Technique = Proxy: External Proxy
+Technique ID = T1090.002
+Procedure = The actor used compromised SOHO devices (e.g. routers) to obfuscate the source of their activity.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Resource Development
+Technique = Develop Capabilities: Malware
+Technique ID = T1587.001
+Procedure = BianLian group actors developed a custom backdoor used in their intrusions.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Initial Access
+Technique = External Remote Services
+Technique ID = T1133
+Procedure = BianLian group actors used RDP with valid accounts as a means of gaining initial access and for lateral movement.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Initial Access
+Technique = Phishing
+Technique ID = T1566
+Procedure = BianLian group actors used phishing to obtain valid user credentials for initial access.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Initial Access
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = BianLian group actors used RDP with valid accounts as a means of gaining initial access and for lateral movement.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Execution
+Technique = Command and Scripting Interpreter: PowerShell
+Technique ID = T1059.001
+Procedure = BianLian group actors used PowerShell to disable AMSI on Windows. See Appendix: Windows PowerShell and Command Shell Activity for additional information.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Execution
+Technique = Command and Scripting Interpreter: Windows Command Shell
+Technique ID = T1059.003
+Procedure = BianLian group actors used Windows Command Shell to disable antivirus tools, for discovery, and to execute their tools on victim networks. See Appendix: Windows PowerShell and Command Shell Activity for additional information.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Execution
+Technique = Scheduled Task/Job: Scheduled Task
+Technique ID = T1053.005
+Procedure = BianLian group actors used a Scheduled Task run as SYSTEM (the highest privilege Windows accounts) to execute a Dynamic Link Library (DLL) file daily. See Appendix: Windows PowerShell and Command Shell Activity for additional information.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Persistence
+Technique = Account Manipulation
+Technique ID = T1098
+Procedure = BianLian group actors changed the password of an account they created. BianLian actors modified the password of an account they added to the local Remote Desktop Users group.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Persistence
+Technique = Create Account: Local Account
+Technique ID = T1136.001
+Procedure = BianLian group actors created/activated a local administrator account. BianLian group actors used net.exe to add a user account to the local Remote Desktop Users group. (See Appendix: Windows PowerShell and Command Shell Activity for more information.)
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Defense Evasion
+Technique = Modify Registry
+Technique ID = T1112
+Procedure = BianLian group actors modified the registry to  disable user authentication for RDP connections, allow a user to receive help from Remote Assistance, and disable tamper protection for Sophos SAVEnabled, SEDEenabled, and SAVService services, which enables them to uninstall these services.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Defense Evasion
+Technique = Impair Defenses: Disable or Modify Tools
+Technique ID = T1562.001
+Procedure = BianLian group actors disabled Windows defender, AMSI, and Sophos SAVEnabled and SEDEenabled tamper protection services. See Appendix: Windows PowerShell and Command Shell Activity for additional information.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Defense Evasion
+Technique = Impair Defenses: Disable or Modify System Firewall
+Technique ID = T1562.004
+Procedure = BianLian group actors added modified firewalls to allow RDP traffic by adding new rules to the Windows firewall that allow incoming RDP traffic and enable a pre-existing Windows firewall rule group named Remote Desktop.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Credential Access
+Technique = OS Credential Dumping: LSASS Memory
+Technique ID = T1003.001
+Procedure = BianLian group actors accessed credential material stored in the process memory of the LSASS. See Appendix: Windows PowerShell and Command Shell Activity for additional information.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Credential Access
+Technique = OS Credential Dumping: NTDS
+Technique ID = T1003.003
+Procedure = BianLian group actors attempted to access or create a copy of the Active Directory domain database in order to steal credential information and to obtain other information about domain members such as devices, users, and access rights.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Credential Access
+Technique = Unsecured Credentials: Credentials In Files
+Technique ID = T1552.001
+Procedure = BianLian group actors searched local file systems and remote file shares for files containing insecurely stored credentials.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Account Discovery: Domain Account
+Technique ID = 1087.002
+Procedure = BianLian group actors queried the domain controller to identify accounts in the Domain Admins and Domain Computers groups. This information can help adversaries determine which domain accounts exist to aid in follow-on activity.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Domain Trust Discovery
+Technique ID = T1482
+Procedure = BianLian group actors used PingCastle to enumerate the AD and map trust relationships. BianLian group actors retrieved a list of domain trust relationships used to identify lateral movement opportunities in Windows multidomain/forest environments.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = File and Directory Discovery
+Technique ID = T1083
+Procedure = BianLian group used malware (system.exe) that enumerates files.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Network Service Discovery
+Technique ID = T1046
+Procedure = BianLian actors used Advanced Port Scanner and SoftPerfect Network Scanner to ping computers, scan ports, and identify program versions running on ports.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Network Share Discovery
+Technique ID = T1135
+Procedure = BianLian actors used SoftPerfect Network Scanner, which can discover shared folders. BianLian group actors used SharpShares to enumerate accessible network shares in a domain.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Permission Groups Discovery: Domain Groups
+Technique ID = T1069.002
+Procedure = BianLian group actors queried the domain controller to identify groups.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Query Registry
+Technique ID = T1012
+Procedure = BianLian group used malware (system.exe) that enumerates registry.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = Remote System Discovery
+Technique ID = T1018
+Procedure = BianLian group actors attempted to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for lateral movement. BianLian group actors retrieved a list of domain controllers.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Discovery
+Technique = System Owner User Discovery
+Technique ID = T1033
+Procedure = BianLian group actors queried currently loggedin users on a machine.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Lateral Movement
+Technique = Remote Services: Remote Desktop Protocol
+Technique ID = T1021.001
+Procedure = BianLian group actors used RDP with valid accounts for lateral movement.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Collection
+Technique = Clipboard Data
+Technique ID = T1115
+Procedure = BianLian group actors’ malware collects data stored in the clipboard from users copying information within or between applications.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Command and Control
+Technique = Ingress Tool Transfer
+Technique ID = T1105
+Procedure = BianLian group actors transferred tools or other files from an external system into a compromised environment.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Command and Control
+Technique = Remote Access Software
+Technique ID = T1219
+Procedure = BianLian group actors used legitimate desktop support and remote access software, such as TeamViewer, Atera, and SplashTop, to establish an interactive command and control channel to target systems within networks.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Exfiltration
+Technique = Transfer Data to Cloud Account
+Technique ID = T1537
+Procedure = BianLian group actors used Rclone to exfiltrate data to a cloud account they control on the same service to avoid typical file transfers/downloads and network-based exfiltration detection.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Exfiltration
+Technique = Exfiltration Over Alternative Protocol
+Technique ID = T1048
+Procedure = BianLian group actors exfiltrated data via FTP.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Exfiltration
+Technique = Exfiltration Over Web Service: Exfiltration to Cloud Storage
+Technique ID = T1567.002
+Procedure = BianLian group actors exfiltrated data via Mega public file-sharing service.
+
+Title = #StopRansomware: BianLian Ransomware Group
+Date = 17 May 2023
+Attack Type = malware
+Industry = infrastructure, professional services and property development
+Actor = BianLian Ransomware
+Motivation = threatening to release data if payment is not made
+Tactic = Impact
+Technique = Data Encrypted for Impact
+Technique ID = T1486
+Procedure = BianLian group actors encrypted data on target systems.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Initial Access 
+Technique = Phishing 
+Technique ID = T1566
+Procedure = Threat actors send victims emails containing malicious attachments or links, typically to execute malicious code on victim systems.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Initial Access 
+Technique = Exploit Public-Facing Application 
+Technique ID = T1190
+Procedure = Threat actors search for and opportunistically exploit vulnerabilities in internet facing applications and devices to gain access to victim networks.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Initial Access 
+Technique = Drive-by Compromise 
+Technique ID = T1189
+Procedure = Actors gain access to a system via a user visiting a website that is used to host the adversary controlled content or malware such as Bokbot, Qakbot or BatLoader.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Initial Access 
+Technique = Valid Accounts 
+Technique ID = T1078
+Procedure = Actors have obtained credentials for valid accounts and gain access victim networks.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Persistence 
+Technique = External Remote Services 
+Technique ID = T1133
+Procedure = Actors have used commercial remote access software to persist on victim systems.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Persistence 
+Technique = Hijack Execution Flow 
+Technique ID = T1574
+Procedure = Actors execute their own malicious payloads by hijacking the way operating systems run programs. Actors may use these mechanisms to elevate privileges or evade defences.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Execution 
+Technique = System Services: Service Execution 
+Technique ID = T1569.002
+Procedure = Actors have used the legitimate Windows Sysinternals tool PsExec [S0029] to execute malicious content.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Execution 
+Technique = Command and Scripting Interpreter 
+Technique ID = T1059
+Procedure = Threat actor abuse command and script interpreters such as windows command shell or PowerShell to execute commands, scripts, or binaries.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Exfiltration 
+Technique = Exfiltration Over Web Service 
+Technique ID = T1567
+Procedure = Actors have exfiltrated sensitive data and threatened to publicly release it. Actors have exfiltrated data to legitimate and publicly available web services, and in some cases have used legitimate tools such as RClone.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Lateral Movement 
+Technique = Various
+Technique ID = TA0008
+Procedure = Actors have deployed post-exploitation tools such as PCHunter, PowerTool, GMER, NetScan and Process Hacker on victim networks. These techniques are commonly used to move laterally through victim networks, harvest credentials, elevate privileges, exfiltrate data and deploy additional tools such as encryption binaries.
+
+Title = 2023-01: ASD's ACSC Ransomware Profile - Royal
+Date = 24 January 2023
+Attack Type = malware
+Industry = Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education
+Actor = Royal ransomware
+Motivation = encrypting their data, and extorting a ransom to return access to the sensitive files
+Tactic = Impact 
+Technique = Data Encrypted for Impact
+Technique ID = T1486
+Procedure = Actors have used Royal ransomware to encrypt valuable data, disrupt operations, and extort payment from victims.
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Initial Access 
+Technique = Valid Accounts 
+Technique ID = T1078
+Procedure = Actors have obtained credentials for valid accounts and used these to gain access to victim networks.
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Persistence 
+Technique = External Remote Services 
+Technique ID = T1133
+Procedure = Actors have used remote access services, such as valid Remote Desktop Protocol and SSH credentials, to persist on victim’s systems.
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Execution 
+Technique = System Services: Service Execution 
+Technique ID = T1569.002
+Procedure = Actors have used the legitimate Windows Sysinternals tool PsExec [S0029] to execute malicious content.
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Exfiltration 
+Technique = Exfiltration Over Web Service 
+Technique ID = T1567
+Procedure = Actors have exfiltrated data to legitimate and publicly available web services, including legitimate cloud storage services.
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Lateral Movement 
+Technique = Various
+Technique ID = TA0008
+Procedure = Actors have deployed the widely-used post-exploitation framework Cobalt Strike on victim networks [S0154].
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Impact 
+Technique = Data Encrypted for Impact
+Technique ID = T1486
+Procedure = Actors have used ALPHV ransomware to encrypt valuable data, disrupt operations, and extort payment from victims.
+
+Title = 2022-004: ASD's ACSC Ransomware Profile – ALPHV (aka BlackCat)
+Date = 14 April 2022
+Attack Type = malware
+Industry = energy, finance, construction, government
+Actor = ALPHV
+Motivation = restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Impact 
+Technique = Network Denial of Service 
+Technique ID = T1498
+Procedure = Actors have threatened victims with Distributed Denial of Service (DDoS) attacks to extort ransom payments.
+
+Title = 2021-010: ASD's ACSC Ransomware Profile - Conti
+Date = 10 December 2021
+Attack Type = malware
+Industry = healthcare and energy
+Actor = Conti
+Motivation =  restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Initial Access
+Technique = Exploit Public-Facing Application
+Technique ID = 1190
+Procedure = Threat actors search for and opportunistically exploit vulnerabilities in internet facing applications and devices to gain access to victim networks.
+
+Title = 2021-010: ASD's ACSC Ransomware Profile - Conti
+Date = 10 December 2021
+Attack Type = malware
+Industry = healthcare and energy
+Actor = Conti
+Motivation =  restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Initial Access
+Technique = Valid Accounts
+Technique ID = T1078
+Procedure = Actors have obtained credentials for valid accounts and gain access victim networks. Actors have used phishing and password brute forcing techniques to obtain credentials. They have also purchased credentials or collected them from publicly available breaches.
+
+Title = 2021-010: ASD's ACSC Ransomware Profile - Conti
+Date = 10 December 2021
+Attack Type = malware
+Industry = healthcare and energy
+Actor = Conti
+Motivation =  restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Persistence
+Technique = External Remote Services
+Technique ID = T1133
+Procedure = Actors have used the commercial remote access software “AnyDesk” to persist on victim systems.
+
+Title = 2021-010: ASD's ACSC Ransomware Profile - Conti
+Date = 10 December 2021
+Attack Type = malware
+Industry = healthcare and energy
+Actor = Conti
+Motivation =  restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Exfiltration
+Technique = Exfiltration Over Web Service
+Technique ID = T1567
+Procedure = Actors have exfiltrated sensitive data and threatened to publicly release it. Actors have exfiltrated data to legitimate and publicly available web services, and in some cases have used legitimate tools such as RClone.
+
+Title = 2021-010: ASD's ACSC Ransomware Profile - Conti
+Date = 10 December 2021
+Attack Type = malware
+Industry = healthcare and energy
+Actor = Conti
+Motivation =  restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Lateral Movement
+Technique = Various
+Technique ID = nan
+Procedure = Actors have deployed widely-used malware and post-exploitation tools such as Trickbot, BazarLoader/BazarBackdoor, Emotet, Cobalt Strike and Metasploit on victim networks. These techniques are commonly used to move laterally through victim networks, harvest credentials, elevate privileges, exfiltrate data and deploy additional tools such as encryption binaries. In addition, actors have used the reconnaissance tool BloodHound [S0521] to map victims’ Active Directory environments.
+
+Title = 2021-010: ASD's ACSC Ransomware Profile - Conti
+Date = 10 December 2021
+Attack Type = malware
+Industry = healthcare and energy
+Actor = Conti
+Motivation =  restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.
+Tactic = Impact
+Technique = Data Encrypted for Impact
+Technique ID = T1486
+Procedure = Actors have used Conti ransomware to encrypt valuable data, disrupt operations, and extort payment from victims.
+

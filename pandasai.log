@@ -1,0 +1,338 @@
+2024-05-20 14:54:37 [INFO] Question: What actor occurred on 23 Feb 2022?
+2024-05-20 14:54:37 [INFO] Running PandasAI with openai LLM...
+2024-05-20 14:54:37 [INFO] Prompt ID: 10ee5cc7-3673-4d28-bfc7-9b62b2b76b88
+2024-05-20 14:54:37 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-20 14:54:37 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-20 14:54:37 [INFO] Executing Step 1: CacheLookup
+2024-05-20 14:54:37 [INFO] Executing Step 2: PromptGeneration
+2024-05-20 14:54:40 [INFO] Using prompt: <dataframe>
+dfs[0]:357x11
+Date,Title,Attack_type,Industry,Actor,Motivation,Tactic,Technique,Technique_ID,Procedure,Source
+2023-08-31,Infinite Second,Malware,U.S. critical infrastructure sectors,ALPHV,"an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.",Lateral Movement ,Virtualization/Sandbox Evasion: System Checks,,Devil Bait creates a Scheduled Task to beacon every 10 minutes.,US
+2021-09-20,SVR cyber actors adapt tactics for initial cloud access,Cyber Espionage,Local and State Councils,Sandworm,"Espionage,Disruption",Exfiltration,Gather Victim Org Information,T1069.001,Play ransomware actors distribute executables via Group Policy Objects.,Australia
+2024-08-02,#StopRansomware: Play ransomware,DUMMY,"Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education",Royal ransomware,Espionage,Resource Development,Network Service Discovery,T1426 (Mobile),"Volt Typhoon created systeminfo.dat in C:\Users\Public\Documents, but subsequently deleted it.",UK
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ What actor occurred on 23 Feb 2022?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-05-20 14:54:40 [INFO] Executing Step 3: CodeGenerator
+2024-05-20 14:54:46 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:357x11
+Date,Title,Attack_type,Industry,Actor,Motivation,Tactic,Technique,Technique_ID,Procedure,Source
+2023-08-31,Infinite Second,Malware,U.S. critical infrastructure sectors,ALPHV,"an actor perceives their target
+to have direct access to information of interest, be an access vector to
+another target, or both.",Lateral Movement ,Virtualization/Sandbox Evasion: System Checks,,Devil Bait creates a Scheduled Task to beacon every 10 minutes.,US
+2021-09-20,SVR cyber actors adapt tactics for initial cloud access,Cyber Espionage,Local and State Councils,Sandworm,"Espionage,Disruption",Exfiltration,Gather Victim Org Information,T1069.001,Play ransomware actors distribute executables via Group Policy Objects.,Australia
+2024-08-02,#StopRansomware: Play ransomware,DUMMY,"Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education",Royal ransomware,Espionage,Resource Development,Network Service Discovery,T1426 (Mobile),"Volt Typhoon created systeminfo.dat in C:\Users\Public\Documents, but subsequently deleted it.",UK
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ What actor occurred on 23 Feb 2022?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-05-20 14:54:46 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+data = {
+    'Date': ['2023-08-31', '2021-09-20', '2024-08-02'],
+    'Title': ['Infinite Second', 'SVR cyber actors adapt tactics for initial cloud access', '#StopRansomware: Play ransomware'],
+    'Attack_type': ['Malware', 'Cyber Espionage', 'DUMMY'],
+    'Industry': ['U.S. critical infrastructure sectors', 'Local and State Councils', 'Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education'],
+    'Actor': ['ALPHV', 'Sandworm', 'Royal ransomware'],
+    'Motivation': ['an actor perceives their target to have direct access to information of interest, be an access vector to another target, or both.', 'Espionage,Disruption', 'Espionage'],
+    'Tactic': ['Lateral Movement', 'Exfiltration', 'Resource Development'],
+    'Technique': ['Virtualization/Sandbox Evasion: System Checks', 'Gather Victim Org Information', 'Network Service Discovery'],
+    'Technique_ID': ['', 'T1069.001', 'T1426 (Mobile)'],
+    'Procedure': ['Devil Bait creates a Scheduled Task to beacon every 10 minutes.', 'Play ransomware actors distribute executables via Group Policy Objects.', 'Volt Typhoon created systeminfo.dat in C:\\Users\\Public\\Documents, but subsequently deleted it.'],
+    'Source': ['US', 'Australia', 'UK']
+}
+
+dfs = [pd.DataFrame(data)]
+
+# Find the actor occurred on 23 Feb 2022
+actor_on_23_feb_2022 = dfs[0][dfs[0]['Date'] == '2021-09-20']['Actor'].values[0]
+
+result = {"type": "string", "value": f"The actor that occurred on 23 Feb 2022 was: {actor_on_23_feb_2022}"}
+            ```
+            
+2024-05-20 14:54:46 [INFO] Executing Step 4: CachePopulation
+2024-05-20 14:54:46 [INFO] Executing Step 5: CodeCleaning
+2024-05-20 14:54:46 [INFO] 
+Code running:
+```
+data = {'Date': ['2023-08-31', '2021-09-20', '2024-08-02'], 'Title': ['Infinite Second', 'SVR cyber actors adapt tactics for initial cloud access', '#StopRansomware: Play ransomware'], 'Attack_type': ['Malware', 'Cyber Espionage', 'DUMMY'], 'Industry': ['U.S. critical infrastructure sectors', 'Local and State Councils', 'Manufacturing, Communications, Healthcare and Public Healthcare (HPH), and Education'], 'Actor': ['ALPHV', 'Sandworm', 'Royal ransomware'], 'Motivation': ['an actor perceives their target to have direct access to information of interest, be an access vector to another target, or both.', 'Espionage,Disruption', 'Espionage'], 'Tactic': ['Lateral Movement', 'Exfiltration', 'Resource Development'], 'Technique': ['Virtualization/Sandbox Evasion: System Checks', 'Gather Victim Org Information', 'Network Service Discovery'], 'Technique_ID': ['', 'T1069.001', 'T1426 (Mobile)'], 'Procedure': ['Devil Bait creates a Scheduled Task to beacon every 10 minutes.', 'Play ransomware actors distribute executables via Group Policy Objects.', 'Volt Typhoon created systeminfo.dat in C:\\Users\\Public\\Documents, but subsequently deleted it.'], 'Source': ['US', 'Australia', 'UK']}
+actor_on_23_feb_2022 = dfs[0][dfs[0]['Date'] == '2021-09-20']['Actor'].values[0]
+result = {'type': 'string', 'value': f'The actor that occurred on 23 Feb 2022 was: {actor_on_23_feb_2022}'}
+        ```
+2024-05-20 14:54:46 [INFO] Executing Step 6: CodeExecution
+2024-05-20 14:54:46 [INFO] Executing Step 7: ResultValidation
+2024-05-20 14:54:46 [INFO] Answer: {'type': 'string', 'value': 'The actor that occurred on 23 Feb 2022 was: Unknown'}
+2024-05-20 14:54:46 [INFO] Executing Step 8: ResultParsing
+2024-05-20 14:55:05 [INFO] Question: Which attack type occurred on 23 Feb 2022?
+2024-05-20 14:55:05 [INFO] Running PandasAI with openai LLM...
+2024-05-20 14:55:05 [INFO] Prompt ID: 96e3d40c-968c-4df7-ae95-38c4b9577b5e
+2024-05-20 14:55:05 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-20 14:55:05 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-20 14:55:05 [INFO] Executing Step 1: CacheLookup
+2024-05-20 14:55:05 [INFO] Using cached response
+2024-05-20 14:55:05 [INFO] Executing Step 2: PromptGeneration
+2024-05-20 14:55:05 [INFO] Executing Step 2: Skipping...
+2024-05-20 14:55:05 [INFO] Executing Step 3: CodeGenerator
+2024-05-20 14:55:05 [INFO] Executing Step 3: Skipping...
+2024-05-20 14:55:05 [INFO] Executing Step 4: CachePopulation
+2024-05-20 14:55:05 [INFO] Executing Step 4: Skipping...
+2024-05-20 14:55:05 [INFO] Executing Step 5: CodeCleaning
+2024-05-20 14:55:05 [INFO] 
+Code running:
+```
+attack_type = dfs[0][dfs[0]['Date'] == '2022-02-23']['Attack_type'].values[0]
+result = {'type': 'string', 'value': f'The attack type that occurred on 23 Feb 2022 was: {attack_type}'}
+        ```
+2024-05-20 14:55:05 [INFO] Executing Step 6: CodeExecution
+2024-05-20 14:55:05 [INFO] Executing Step 7: ResultValidation
+2024-05-20 14:55:05 [INFO] Answer: {'type': 'string', 'value': 'The attack type that occurred on 23 Feb 2022 was: Malware'}
+2024-05-20 14:55:05 [INFO] Executing Step 8: ResultParsing
+2024-05-20 14:55:36 [INFO] Question: How many attack types are included?
+2024-05-20 14:55:36 [INFO] Running PandasAI with openai LLM...
+2024-05-20 14:55:36 [INFO] Prompt ID: 9ff32398-126c-4f52-9dec-efd428189a57
+2024-05-20 14:55:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-20 14:55:36 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-20 14:55:36 [INFO] Executing Step 1: CacheLookup
+2024-05-20 14:55:36 [INFO] Using cached response
+2024-05-20 14:55:36 [INFO] Executing Step 2: PromptGeneration
+2024-05-20 14:55:36 [INFO] Executing Step 2: Skipping...
+2024-05-20 14:55:36 [INFO] Executing Step 3: CodeGenerator
+2024-05-20 14:55:36 [INFO] Executing Step 3: Skipping...
+2024-05-20 14:55:36 [INFO] Executing Step 4: CachePopulation
+2024-05-20 14:55:36 [INFO] Executing Step 4: Skipping...
+2024-05-20 14:55:36 [INFO] Executing Step 5: CodeCleaning
+2024-05-20 14:55:36 [INFO] 
+Code running:
+```
+attack_types = dfs[0]['Attack_type'].nunique()
+result = {'type': 'string', 'value': f'The number of attack types included is: {attack_types}.'}
+        ```
+2024-05-20 14:55:36 [INFO] Executing Step 6: CodeExecution
+2024-05-20 14:55:36 [INFO] Executing Step 7: ResultValidation
+2024-05-20 14:55:36 [INFO] Answer: {'type': 'string', 'value': 'The number of attack types included is: 7.'}
+2024-05-20 14:55:36 [INFO] Executing Step 8: ResultParsing
+2024-05-20 14:55:43 [INFO] Question: How are you?
+2024-05-20 14:55:43 [INFO] Running PandasAI with openai LLM...
+2024-05-20 14:55:43 [INFO] Prompt ID: 860cfa32-181f-4947-90ec-a8e7e40a721e
+2024-05-20 14:55:43 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-20 14:55:43 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-20 14:55:43 [INFO] Executing Step 1: CacheLookup
+2024-05-20 14:55:43 [INFO] Using cached response
+2024-05-20 14:55:43 [INFO] Executing Step 2: PromptGeneration
+2024-05-20 14:55:43 [INFO] Executing Step 2: Skipping...
+2024-05-20 14:55:43 [INFO] Executing Step 3: CodeGenerator
+2024-05-20 14:55:43 [INFO] Executing Step 3: Skipping...
+2024-05-20 14:55:43 [INFO] Executing Step 4: CachePopulation
+2024-05-20 14:55:43 [INFO] Executing Step 4: Skipping...
+2024-05-20 14:55:43 [INFO] Executing Step 5: CodeCleaning
+2024-05-20 14:55:43 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0]}
+        ```
+2024-05-20 14:55:43 [INFO] Executing Step 6: CodeExecution
+2024-05-20 14:55:43 [INFO] Executing Step 7: ResultValidation
+2024-05-20 14:55:43 [INFO] Answer: {'type': 'dataframe', 'value':           Date  ...     Source
+0   2022-02-23  ...  Australia
+1   2022-02-23  ...  Australia
+2   2022-02-23  ...  Australia
+3   2022-02-23  ...  Australia
+4   2022-02-23  ...  Australia
+..         ...  ...        ...
+352 2021-10-12  ...         US
+353 2021-10-12  ...         US
+354 2021-10-12  ...         US
+355 2021-10-12  ...         US
+356 2021-10-12  ...         US
+
+[357 rows x 11 columns]}
+2024-05-20 14:55:43 [INFO] Executing Step 8: ResultParsing
+2024-05-20 14:55:57 [INFO] Question: What actor included on 23/2/22?
+2024-05-20 14:55:57 [INFO] Running PandasAI with openai LLM...
+2024-05-20 14:55:57 [INFO] Prompt ID: 3fbd5dde-f78b-4c6d-a95d-4e388d831295
+2024-05-20 14:55:57 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-20 14:55:57 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-20 14:55:57 [INFO] Executing Step 1: CacheLookup
+2024-05-20 14:55:57 [INFO] Executing Step 2: PromptGeneration
+2024-05-20 14:56:00 [INFO] Using prompt: <dataframe>
+dfs[0]:357x11
+Date,Title,Attack_type,Industry,Actor,Motivation,Tactic,Technique,Technique_ID,Procedure,Source
+2021-09-20,Jolly Jellyfish shellcode downloader which also downloads and executes a legitimate file,Mobile Malware,healthcare and energy,Sandstorm,"Espionage,Disruption",Lateral Movement ,Data Destruction,T1070,Hexed Noodle system commands are executed by passing them to âsh -câ,UK
+2023-05-25,Rhythmic Parry,Cyber Espionage,"infrastructure sectors, including education, energy, financial services, food and agriculture, government and emergency services, healthcare, manufacturing, and transportation",Play ransomware, restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.,Execution,Lateral Tool Transfer,,Hexed Noodle configuration is stored in the app as hex encoded strings containing a 16 byte XOR-key prefix â in common with other AppleSeed variants.,Australia
+2021-10-12,2022-004: ASD's ACSC Ransomware Profile  ALPHV (aka BlackCat),Malicious macro-enabled Microsoft Word document and VBScript,Security,BianLian Ransomware,"encrypting their data, and extorting a ransom to return access to the sensitive files",Reconnaissance,Abuse Elevation Control Mechanism,T1426 (Mobile),"LockBit affiliates may use Chocolatey, a command-line package manager for Windows.",US
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ What actor included on 23/2/22?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-05-20 14:56:00 [INFO] Executing Step 3: CodeGenerator
+2024-05-20 14:56:02 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:357x11
+Date,Title,Attack_type,Industry,Actor,Motivation,Tactic,Technique,Technique_ID,Procedure,Source
+2021-09-20,Jolly Jellyfish shellcode downloader which also downloads and executes a legitimate file,Mobile Malware,healthcare and energy,Sandstorm,"Espionage,Disruption",Lateral Movement ,Data Destruction,T1070,Hexed Noodle system commands are executed by passing them to âsh -câ,UK
+2023-05-25,Rhythmic Parry,Cyber Espionage,"infrastructure sectors, including education, energy, financial services, food and agriculture, government and emergency services, healthcare, manufacturing, and transportation",Play ransomware, restricts access to corporate files and systems by encrypting them into a locked and unusable format. Victims receive instructions on how to engage with the offenders after encryption.,Execution,Lateral Tool Transfer,,Hexed Noodle configuration is stored in the app as hex encoded strings containing a 16 byte XOR-key prefix â in common with other AppleSeed variants.,Australia
+2021-10-12,2022-004: ASD's ACSC Ransomware Profile  ALPHV (aka BlackCat),Malicious macro-enabled Microsoft Word document and VBScript,Security,BianLian Ransomware,"encrypting their data, and extorting a ransom to return access to the sensitive files",Reconnaissance,Abuse Elevation Control Mechanism,T1426 (Mobile),"LockBit affiliates may use Chocolatey, a command-line package manager for Windows.",US
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ What actor included on 23/2/22?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-05-20 14:56:02 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs[0]['Date'] = pd.to_datetime(dfs[0]['Date'])
+actor_on_date = dfs[0][dfs[0]['Date'] == '2022-02-23']['Actor'].values[0]
+
+# Declare result var
+result = {
+    "type": "string",
+    "value": f"The actor included on 23/2/22 is: {actor_on_date}"
+}
+            ```
+            
+2024-05-20 14:56:02 [INFO] Executing Step 4: CachePopulation
+2024-05-20 14:56:02 [INFO] Executing Step 5: CodeCleaning
+2024-05-20 14:56:02 [INFO] 
+Code running:
+```
+dfs[0]['Date'] = pd.to_datetime(dfs[0]['Date'])
+actor_on_date = dfs[0][dfs[0]['Date'] == '2022-02-23']['Actor'].values[0]
+result = {'type': 'string', 'value': f'The actor included on 23/2/22 is: {actor_on_date}'}
+        ```
+2024-05-20 14:56:02 [INFO] Executing Step 6: CodeExecution
+2024-05-20 14:56:02 [INFO] Executing Step 7: ResultValidation
+2024-05-20 14:56:02 [INFO] Answer: {'type': 'string', 'value': 'The actor included on 23/2/22 is: Sandstorm'}
+2024-05-20 14:56:02 [INFO] Executing Step 8: ResultParsing

@@ -1,0 +1,3 @@
+- Please install: python3
+- Please run ' pip install -r requirements.txt ' 
+- For our team ' please add the needed libraries installation in 'requirements.txt'
